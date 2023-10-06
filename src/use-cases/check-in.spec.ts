@@ -11,7 +11,7 @@ let gymsRepository: InMemoryGymsRepository
 let sut: CheckinUseCase
 
 describe("Register use case", () => {
-  beforeEach(async() => {
+  beforeEach(async () => {
     checkinsRepository = new InMemoryCheckInsRepository()
     gymsRepository = new InMemoryGymsRepository()
     sut = new CheckinUseCase(checkinsRepository, gymsRepository)
@@ -25,14 +25,14 @@ describe("Register use case", () => {
       longitude: new Decimal(-49.6401091),
     })
 
-     await gymsRepository.create({
-       id: "gym-01",
-       title: "JavaScript Gym",
-       description: "",
-       phone: "",
-       latitude: -27.2092052,
-       longitude: -49.6401091,
-     })
+    await gymsRepository.create({
+      id: "gym-01",
+      title: "JavaScript Gym",
+      description: "",
+      phone: "",
+      latitude: -27.2092052,
+      longitude: -49.6401091,
+    })
 
     vi.useFakeTimers()
   })
