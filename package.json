@@ -26,6 +26,7 @@
     "vite-tsconfig-paths": "4.2.1"
   },
   "dependencies": {
+    "@fastify/jwt": "7.2.1",
     "@prisma/client": "5.3.1",
     "@types/bcryptjs": "2.4.4",
     "bcryptjs": "2.4.3",
